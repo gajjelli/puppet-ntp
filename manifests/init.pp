@@ -17,6 +17,6 @@ Array[String] $servers   = $ntp::params::servers,
 
 ) inherits ::ntp::params {
 	class { '::ntp::install': }
-        ->	class { '::config': }
-	->	class { '::service': }
+        ->	class { '::ntp::config': }
+	->	class { '::ntp::service': }
 }
